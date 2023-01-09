@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/imask"></script>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <title>Test app</title>
+</head>
+
+<body>
+    <div class="main_block">
+        <button class="main_block__button">
+            Обратная связь
+        </button>
+        <div class="modal__container">
+            <div class="row">
+                <h1>Обратная связь</h1>
+            </div>
+            <form id="modal__form" class="row input-container" method="post" action="#">
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <input id="input__name" name="name" type="text" required />
+                        <label>Имя</label>
+                    </div>
+                    <span id="err_name" class="err-msg">Заполните поле имя и не используйте спец символы</span>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="styled-input wide" style="float:right;">
+                        <input id="input__phoneNumber" name="phoneNumber" type="text" required />
+                        <label>Номер телефона</label>
+                    </div>
+                    <span id="err_phoneNumber" class="err-msg">Заполните номер телефона в соответствии с маской</span>
+                </div>
+                <div class="col-xs-12">
+                    <div class="styled-input wide">
+                        <textarea id="input__message" name="message" required></textarea>
+                        <label>Сообщение</label>
+                    </div>
+                    <span id="err_message" class="err-msg">Пожалуйста впишите свое сообщение  и не используйте спец символы</span>
+                </div>
+                <div class="col-xs-12">
+                    <button class="submit-btn main_block__button" type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
